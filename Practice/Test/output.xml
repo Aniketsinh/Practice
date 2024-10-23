@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.4 on win32)" generated="2024-10-22T19:56:00.714584" rpa="false" schemaversion="5">
+<suite id="s1" name="TestDemo1" source="F:\Automation\Python\Practice\Test\TestDemo1.robot">
+<test id="s1-t1" name="Validate Succesful Login" line="13">
+<kw name=" Open Browser the website page">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-10-22T19:56:01.688850" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-10-22T19:56:01.688850" elapsed="3.335781"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-10-22T19:56:05.024631" level="INFO">Opening url 'https://rahulshettyacademy.com/loginpagePractise/'</msg>
+<arg>https://rahulshettyacademy.com/loginpagePractise/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-10-22T19:56:05.024631" elapsed="0.571613"/>
+</kw>
+<status status="PASS" start="2024-10-22T19:56:01.686320" elapsed="3.909924"/>
+</kw>
+<kw name="Fill the login form">
+<msg time="2024-10-22T19:56:05.616526" level="FAIL">No keyword with name 'Fill the login form' found.</msg>
+<status status="FAIL" start="2024-10-22T19:56:05.616526" elapsed="0.000000">No keyword with name 'Fill the login form' found.</status>
+</kw>
+<kw name="wait until">
+<status status="NOT RUN" start="2024-10-22T19:56:05.616526" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-10-22T19:56:01.686320" elapsed="3.930206">No keyword with name 'Fill the login form' found.</status>
+</test>
+<doc>To validate the Login form</doc>
+<status status="FAIL" start="2024-10-22T19:56:00.724137" elapsed="4.892389"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="TestDemo1">TestDemo1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

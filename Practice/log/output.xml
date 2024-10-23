@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.4 on win32)" generated="2024-10-22T22:55:35.644481" rpa="false" schemaversion="5">
+<suite id="s1" name="TestDemo1" source="F:\Automation\Python\Practice\Test\TestDemo1.robot">
+<test id="s1-t1" name="Validate Succesful Login" line="25">
+<kw name=" Open Browser the website page">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-10-22T22:55:35.951865" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-10-22T22:55:35.951865" elapsed="1.461054"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-10-22T22:55:37.412919" level="INFO">Opening url 'https://rahulshettyacademy.com/loginpagePractise/'</msg>
+<arg>https://rahulshettyacademy.com/loginpagePractise/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-10-22T22:55:37.412919" elapsed="1.041256"/>
+</kw>
+<status status="PASS" start="2024-10-22T22:55:35.951865" elapsed="2.502310"/>
+</kw>
+<kw name=" Fill the login form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-22T22:55:38.454175" level="INFO">Typing text 'aniketsinh.108@gmail.com' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>aniketsinh.108@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-22T22:55:38.454175" elapsed="0.230407"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-10-22T22:55:38.685060" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2024-10-22T22:55:38.720645" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:password</arg>
+<arg>$etuDhw@j1089</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-22T22:55:38.685060" elapsed="0.134462"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-22T22:55:38.819522" level="INFO">Clicking button 'signInBtn'.</msg>
+<arg>signInBtn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-22T22:55:38.819522" elapsed="0.085230"/>
+</kw>
+<status status="PASS" start="2024-10-22T22:55:38.454175" elapsed="0.450577"/>
+</kw>
+<kw name=" wait until it checks error and display error message">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>css:.alert-danger</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-10-22T22:55:38.904752" elapsed="0.031936"/>
+</kw>
+<status status="PASS" start="2024-10-22T22:55:38.904752" elapsed="0.031936"/>
+</kw>
+<kw name="Verify error message is correct">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-22T22:55:38.952890" level="INFO">${result} = </msg>
+<var>${result}</var>
+<arg>css:.alert-danger</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-22T22:55:38.936688" elapsed="0.016202"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2024-10-22T22:55:38.968443" level="FAIL"> != Incorrect username/password.</msg>
+<arg>${result}</arg>
+<arg>Incorrect username/password.</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="FAIL" start="2024-10-22T22:55:38.968185" elapsed="0.001597"> != Incorrect username/password.</status>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-10-22T22:55:38.969782" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-10-22T22:55:38.936688" elapsed="0.033094"> != Incorrect username/password.</status>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-10-22T22:55:38.969782" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-10-22T22:55:35.951865" elapsed="3.017917"> != Incorrect username/password.</status>
+</test>
+<doc>To validate the Login form</doc>
+<status status="FAIL" start="2024-10-22T22:55:35.660105" elapsed="3.309677"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="TestDemo1">TestDemo1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
